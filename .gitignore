@@ -1,0 +1,4 @@
+*.ts
+*.m3u8
+*.flv
+.DS_Store

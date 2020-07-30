@@ -1,0 +1,23 @@
+version: '3.0'
+
+services:
+  rtmp-server:
+    image: tiangolo/nginx-rtmp
+    ports:
+      - 1935:1935
+      - 8080:80
+    volumes:
+      # For running rtmp server without recording
+      # - ./configs/nginx-no-recording.cong:/etc/nginx/nginx.conf
+
+      # For running rtmp server with simple recording
+      # - ./configs/nginx-recording.conf:/etc/nginx/nginx.conf
+
+      # For running rtmp server with hls stream
+      # - ./configs/nginx-videojs.conf:/etc/nginx/nginx.conf
+ 
+      # For running rtmp server with hls stream + recording  
+      - ./configs/nginx-videojs-recording.conf:/etc/nginx/nginx.conf
+
+      - ./nginx:/usr/local/nginx/html
+

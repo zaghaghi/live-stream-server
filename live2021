@@ -1,0 +1,3 @@
+git clone https://github.com/zaghaghi/live-stream-server.git
+cd live-stream-server
+docker-compose up
